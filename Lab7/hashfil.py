@@ -118,4 +118,4 @@ if __name__ == '__main__':
     d['3'] = 'tre'
 
     print('d["2"]=', d['2'])
-    print('Ändrar från remote repository')
+    print('Ändrar från local repository')
