@@ -1,0 +1,25 @@
+Teori!
+
+Enligt teorin borde
+
+N = (n*log2(n))/n = 20
+
+ge lika effektiv sökning för sorterad och osorterad.
+
+
+
+Testar!
+
+Att göra sökningen för N=1:
+
+Linjärsökning tar     0.3863  sekunder
+Quick Sort tar        34.1016 sekunder
+
+
+Att göra sökningen för N=90:
+
+Linjärsökning tar     32.4013 sekunder
+Quick Sort tar        33.9653 sekunder
+
+
+Slutsats. Stämmer inte så bra med teorin.

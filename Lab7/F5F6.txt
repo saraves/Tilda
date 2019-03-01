@@ -1,0 +1,17 @@
+              H A S H T A B E L L (hacka, sprida ut)
+- Jämförbar med dictonary
+- går direkt till rätt svar
+- O(1)
+- dict = ["key": value]
+- Nyckel och värde ska ligga i ett och samma objekt
+- hash-funktion. Få att ett visst nyckelvärde ska ge ett specifikt värde
+- inbyggd i python hashlib.sha1()
+- göra om till binärt b'hej'
+
+                  G R A F E R
+- Grannmatris/grannlista
+- Kan ha en dictonary som mappar 0, 1, 2... med
+Medborgarplatse, slussen, mariatorget osv.
+- Ej intressant att resa från sig själv till sig själv
+- Breddenförstsökning (minimering)
+- Djupetförstsökning (maximering)

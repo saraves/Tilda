@@ -1,0 +1,8 @@
+Del 1
+
+Uppslagning i dictionary i labb 6:    0.287 s
+Uppslagning i hashtabell i labb 7:    0.7764 s
+
+I princip samma då båda implementationerna använder pythons inbyggda dictionary.
+
+Del 2.
