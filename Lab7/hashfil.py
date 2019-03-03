@@ -4,7 +4,7 @@ class Hashtabell():
     '''
 
     def __init__(self, size):
-        self.size = size * 3        # Anpassar tabellens storlek för att minska kollisioner
+        self.size = 281        # Anpassar tabellens storlek för att minska kollisioner
         self.hashtable = [None] * self.size
         self.collisions = 0
 
@@ -93,18 +93,22 @@ class Hashtabell():
                 # Gått igenom hela hashtabellen
                 if position == startslot:
                     stop = True
-        return data
+
+        if data == None:
+            raise KeyError
+        else:
+            return data
 
     def rehash(self, oldhash, size):
         '''
-        Kollisionsupplösning med 'Plus 3'
+        Kollisionsupplösning med Linear probing - 'Plus 3'
         Från boken
         '''
         return (oldhash + 3) % size
 
 class HashNode():
     '''
-    Ingen aning vad den här klassen ska göra
+    Klass för noderna som lagras i hashtabellen
     '''
 
     def __init__(self, key, data):
@@ -112,10 +116,14 @@ class HashNode():
         self.data = data
 
 if __name__ == '__main__':
-    d = HashTable()
-    d['1'] = 'ett'
-    d['2'] = 'två'
-    d['3'] = 'tre'
+    alist = {'1':'ett', '2':'två', '3':'tre'}
+    hashtabell = Hashtabell(len(alist))
 
-    print('d["2"]=', d['2'])
-    print('Ändrar från local repository')
+    print('hashtabell["2"]=', hashtabell['2'])
+    print('Vi fick', hashtabell.collisions, 'kollisioner')
+
+
+# "Redovisa hur många krockar det är som mest vid insättning"
+# Betyder det vid en insättning? Eller vid insättning av hela atomtabellen?
+# Ska tabellen ha en konstant storlek? Eller det primtal som är närmst
+# t.ex. (2 * size)

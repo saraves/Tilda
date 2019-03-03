@@ -23,7 +23,7 @@ def partOne():
     '''
     Del 1. Hashtabell som bygger på pythons inbyggda dictionary.
     '''
-    lines = int(input('Hur många rader vill du läsa in, max 281:'))
+    lines = int(input('Hur många rader vill du läsa in: '))
     songHash = DictHash()
     songHash = readFile(lines, songHash)
 
@@ -35,13 +35,24 @@ def partOne():
 
 def partTwo():
     '''
-    Del 2. Egen hashtabell.
+    Del 2. Egen hashtabell. Key = artist, data = låt
     '''
-    lines = int(input('Hur många rader vill du läsa in, max 281:'))
-    songHash = Hashtabell(281)
-    songHash = readFile(lines, songHash)
+    lines = int(input('Hur många rader vill du läsa in, max 140: '))
+    hashtabell = Hashtabell(281)
+    hashtabell = readFile(lines, hashtabell)
 
-    print('Vi fick', songHash.collisions, 'kollisioner')
+    print('Vi fick', hashtabell.collisions, 'kollisioner')
+
+    searching = 'xxx'
+    while searching != '':
+        searching = input('Ange en artist: ')
+        try:
+            print(searching, 'har en låt som heter', hashtabell.get(searching))
+        except KeyError:
+            if searching == '':
+                break
+            print(searching, 'finns inte i hashtabellen')
+            print('Försök igen!')
 
 def readFile(lines, songHash):
     """

@@ -4,7 +4,6 @@ class DictHash():
     '''
 
     def __init__(self):
-        self.size = 97
         self.hashtable = {}
 
     def __getitem__(self, key):
