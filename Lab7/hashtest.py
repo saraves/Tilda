@@ -177,6 +177,10 @@ def knasAtomFinnsInte(hashtabell):
         print(knasnamn, "fanns inte med i hashtabellen.")
         return True
 
+def collisions(hashtabell):
+    '''Antal kollisioner'''
+    print('Vi fick', hashtabell.collisions, 'kollisioner')
+
 atomlista = skapaAtomlista()
 hashtabell = lagraHashtabell(atomlista)
 #for node in hashtabell.hashtable:
@@ -184,3 +188,4 @@ hashtabell = lagraHashtabell(atomlista)
 #        print(node.key, ' - ', node.data)
 allaAtomerFinns(hashtabell, atomlista)
 knasAtomFinnsInte(hashtabell)
+collisions(hashtabell)

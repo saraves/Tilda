@@ -4,7 +4,7 @@ class Hashtabell():
     '''
 
     def __init__(self, size):
-        self.size = size
+        self.size = size * 3        # Anpassar tabellens storlek för att minska kollisioner
         self.hashtable = [None] * self.size
         self.collisions = 0
 
