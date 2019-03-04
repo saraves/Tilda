@@ -4,7 +4,7 @@ class Hashtabell():
     '''
 
     def __init__(self, size):
-        self.size = 281        # Anpassar tabellens storlek för att minska kollisioner
+        self.size = 2000003       # Anpassar tabellens storlek för att minska kollisioner
         self.hashtable = [None] * self.size
         self.collisions = 0
 
@@ -127,3 +127,5 @@ if __name__ == '__main__':
 # Betyder det vid en insättning? Eller vid insättning av hela atomtabellen?
 # Ska tabellen ha en konstant storlek? Eller det primtal som är närmst
 # t.ex. (2 * size)
+# primtal - 281
+# primtal - 2000003
