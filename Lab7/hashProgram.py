@@ -7,7 +7,7 @@ def main():
     '''
     Kallar på rätt program
     '''
-    
+
     choose = int(input('Vilken del vill du köra? Välj 1 eller 2: '))
 
     while choose != 1 and choose != 2:
